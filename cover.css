@@ -176,15 +176,15 @@ body {
 
 .sans-light {
   font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, sans-serif;
-  line-height: 1;
+  line-height: 0.9em;
 }
 
 .cover-heading {
-  font-size:4em;
+  font-size:3.5em;
 }
 
 .lead {
-  font-size: 1.6em;
+  font-size: 1.4em;
 }
 
 .lead:first-of-type {

@@ -1,30 +1,73 @@
-* {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+/*
+Syntax error: File to import not found or unreadable: ../neat/neat-helpers.
+              Load paths:
+                /Users/davidleonard/code/davidrleonard.github.io (DEPRECATED)
+                /Users/davidleonard/code/davidrleonard.github.io/stylesheets/sass
+        on line 1 of stylesheets/sass/base/_grid-settings.scss
+        from line 5 of stylesheets/sass/application.scss
 
-body {
-  margin: 0;
-  padding: 0; }
+1: //=========== Import base styles
+2: @import "vendor/normalize/normalize";
+3: @import "vendor/bourbon/bourbon";
+4: @import "vendor/neat/neat";
+5: @import "base/grid-settings";
+6: 
 
-h1, h2, h3, h4, h5, h6, p {
-  margin-top: 0; }
-
-p {
-  font-family: "abril-text","Georgia",sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px; }
-
-nav {
-  float: left;
-  display: block;
-  margin-right: 2.84259%;
-  width: 120.56852%;
-  background-color: #a90641;
-  color: white;
-  padding: 5px; }
-  nav:last-child {
-    margin-right: 0; }
-  nav a {
-    color: white; }
+Backtrace:
+stylesheets/sass/base/_grid-settings.scss:1
+stylesheets/sass/application.scss:5
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/import_node.rb:66:in `rescue in import'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/import_node.rb:45:in `import'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/import_node.rb:28:in `imported_file'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/import_node.rb:37:in `css_import?'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:283:in `visit_import'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/stack.rb:79:in `block in with_base'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/stack.rb:121:in `with_frame'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/stack.rb:79:in `with_base'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:297:in `block (2 levels) in visit_import'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:297:in `map'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:297:in `block in visit_import'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/stack.rb:88:in `block in with_import'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/stack.rb:121:in `with_frame'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/stack.rb:88:in `with_import'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:294:in `visit_import'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:152:in `block in visit'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/stack.rb:79:in `block in with_base'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/stack.rb:121:in `with_frame'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/stack.rb:79:in `with_base'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:152:in `visit'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:52:in `map'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:161:in `block in visit_children'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:173:in `with_environment'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:160:in `visit_children'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:180:in `visit_root'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/base.rb:36:in `visit'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:151:in `visit'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/visitors/perform.rb:8:in `visit'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/root_node.rb:36:in `css_tree'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/tree/root_node.rb:20:in `render'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/engine.rb:274:in `render'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:378:in `update_stylesheet'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:189:in `block in update_stylesheets'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:186:in `each'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:186:in `update_stylesheets'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:357:in `on_file_changed'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/sass-3.3.8/lib/sass/plugin/compiler.rb:250:in `block in watch'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:276:in `call'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:276:in `_process_changes'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:233:in `block in _wait_for_changes'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:216:in `loop'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:216:in `_wait_for_changes'
+/Users/davidleonard/.rvm/gems/ruby-2.0.0-p451/gems/listen-2.7.9/lib/listen/listener.rb:312:in `block in _start_wait_thread'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Syntax error: File to import not found or unreadable: ../neat/neat-helpers.\A               Load paths:\A                 /Users/davidleonard/code/davidrleonard.github.io (DEPRECATED)\A                 /Users/davidleonard/code/davidrleonard.github.io/stylesheets/sass\A         on line 1 of stylesheets/sass/base/_grid-settings.scss\A         from line 5 of stylesheets/sass/application.scss\A \A 1: //=========== Import base styles\A 2: @import \"vendor/normalize/normalize\";\A 3: @import \"vendor/bourbon/bourbon\";\A 4: @import \"vendor/neat/neat\";\A 5: @import \"base/grid-settings\";\A 6: "; }

@@ -1,6 +1,7 @@
-//=========== Import bootstrap
-@import "bourbon/bourbon";
-@import "neat/neat";
+//=========== Import base styles
+@import "vendor/normalize/normalize";
+@import "vendor/bourbon/bourbon";
+@import "vendor/neat/neat";
 @import "base/grid-settings";
 
 //=========== Begin custom code
@@ -61,7 +62,7 @@ nav {
   background-color: $red;
   color: $white;
 
-  padding: 5px;
+  padding: 5px;                       
 
   a {
     color: white;

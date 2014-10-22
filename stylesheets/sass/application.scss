@@ -1,14 +1,11 @@
-/* Welcome. */
-
 //=========== Import base styles
+@import "base/intro";
 @import "vendor/normalize/normalize";
 @import "vendor/bourbon/bourbon";
-@import "vendor/neat/neat";
 @import "base/grid-settings";
+@import "vendor/neat/neat";
 
-//=========== Begin custom code
-
-// Basic variables
+//=========== Basic variables
 
 $blue: rgba(44,62,80,1);
 $red: rgba(169,6,65,1);
@@ -16,7 +13,10 @@ $white: white;
 $black: rgba(70,70,70,1);
 $grey: rgba(70,70,70,0.5);
 
-// Reset
+$margin: 32px;
+$halfmargin: 16px;
+
+//=========== Resets
 
 body {
   margin: 0;
@@ -25,9 +25,17 @@ body {
 
 h1, h2, h3, h4, h5, h6, p {
   margin-top: 0;
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 0;
+  -moz-margin-start: 0;
+  -moz-margin-end: 0;
 }
 
-// Type styles
+//=========== Type styles
+
+body {
+  color: $black;
+}
 
 $basesize: 16px;
 $serif: Georgia, serif;
@@ -52,21 +60,85 @@ $serif: Georgia, serif;
   font-weight: $weight;
 }
 
-p {
-  @include serif();
-  font-size: $basesize;
+// Name/logo/topper
+h1 {
+  font-size: $basesize * 5.4;
 }
 
-// Layout
+// Light kicker
+h3 {
+  @include sans(400);
+  color: $grey;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: $basesize;
+
+  margin-bottom: $margin;
+}
+
+p {
+  @include serif(600);
+  font-size: $basesize;
+  line-height: $basesize * 1.6;
+}
+
+p:first-of-type {
+  margin-bottom: $halfmargin;
+}
+
+//=========== Layout
 
 nav {
   @include span-columns(12);
   background-color: $red;
   color: $white;
-
-  padding: 5px;                       
+  min-height: $halfmargin;
+  padding: $halfmargin;                       
 
   a {
     color: white;
+  }
+}
+
+section {
+  @include span-columns(5 of 12);
+  @include shift(1);
+  margin-top: $margin;
+}
+
+hr {
+  @include span-columns (10 of 12);
+  @include shift(1);
+  color: $black;
+
+  margin-top: $margin * 2;
+}
+
+// Styles for specific section
+
+section.intro {
+
+  margin-top: $margin * 2;
+
+  h1 {
+    color: $red;
+    letter-spacing: -3px;
+  }
+
+  p {
+    margin-top: $halfmargin;
+    font-size: $basesize * 1.4;
+    line-height: $basesize * 2.4;
+    margin-bottom: 0;
+  }
+}
+
+section.projects {
+  @include span-columns(10 of 12);
+}
+
+article#permits {
+  img.big {
+    @include span-columns(6 of 10);
   }
 }

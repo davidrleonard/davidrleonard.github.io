@@ -65,6 +65,15 @@ h1 {
   font-size: $basesize * 5.4;
 }
 
+// Headlines
+h2 {
+  @include sans(700);
+  font-size: $basesize * 3.9;
+
+  margin-top: $margin;
+  margin-bottom: $margin;
+}
+
 // Light kicker
 h3 {
   @include sans(400);
@@ -76,14 +85,35 @@ h3 {
   margin-bottom: $margin;
 }
 
+h5 {
+  @extend h3;
+  font-size: $basesize * 0.8;
+  margin-bottom: $halfmargin;
+}
+
 p {
   @include serif(600);
   font-size: $basesize;
   line-height: $basesize * 1.6;
+  margin-bottom: $halfmargin;
 }
 
-p:first-of-type {
+p:last-of-type {
   margin-bottom: $halfmargin;
+}
+
+a {
+  text-decoration: none;
+  color: $red;
+  @include sans(800);
+  padding-bottom: 2px;
+
+  border-bottom: 1px solid $red;
+
+  &:hover {
+    color: lighten($red, 30%);
+    border-bottom: 1px solid lighten($red, 30%);
+  }
 }
 
 //=========== Layout
@@ -107,16 +137,14 @@ section {
 }
 
 hr {
-  @include span-columns (10 of 12);
-  @include shift(1);
   color: $black;
-
   margin-top: $margin * 2;
+  margin-bottom: $halfmargin;
 }
 
 // Styles for specific section
 
-section.intro {
+section#intro {
 
   margin-top: $margin * 2;
 
@@ -133,12 +161,94 @@ section.intro {
   }
 }
 
-section.projects {
+// Contact section
+
+section#contact {
+  @include span-columns(3.4 of 10);
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+
+    li {
+      @include sans(400);
+      font-size: $basesize * 0.9;
+      line-height: $basesize * 2;
+
+      em {
+        font-style: normal;
+        color: $red;
+      }
+    }
+
+    a {
+      border-bottom: none;
+      color: inherit;
+      font-weight: inherit;
+      &:hover {
+        border-bottom: 1px solid $red;
+      }
+    }
+  }
+}
+
+// Projects content
+
+section#projects {
   @include span-columns(10 of 12);
+}
+
+img {
+  margin-bottom: $margin;
+}
+
+// Container for images
+.images {
+  height: 500px;
+  overflow: hidden;
+}
+
+.explainer {
+  @include span-columns(4 of 10);
+}
+
+.details {
+  @include span-columns(3 of 10);
+  @include shift(0.25);
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  }
+  ul li {
+    @include sans(800);
+    color: lighten($black, 20%);
+    line-height: $basesize * 1.4;
+    font-size: $basesize * 0.9;
+  }
 }
 
 article#permits {
   img.big {
     @include span-columns(6 of 10);
+    height: 100%;
   }
+  img.small {
+    @include span-columns(3 of 10);
+  }
+  img.smaller {
+    @include span-columns(3 of 10);
+  }
+}
+
+// footer styles
+
+section#footer {
+  @include span-columns(10 of 10);
+  margin-top: $margin * 3;
+
+  p {
+      @include sans();
+      font-size: $basesize * 0.9;
+    }
 }

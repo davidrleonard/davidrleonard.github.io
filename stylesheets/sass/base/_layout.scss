@@ -1,0 +1,206 @@
+// ===
+// Base template styles
+// ===
+
+// Set up our container
+
+.container {
+  @include outer-container;
+}
+
+
+// Nav is dark background, spans across all columns
+
+nav {
+  @include span-columns(12);
+  background-color: $red;
+  padding: $halfmargin;
+
+  min-height: $halfmargin;
+
+  position: fixed;
+}
+
+// Sections are main containers
+
+section {
+  @include span-columns(6 of 12);
+  margin-top: $margin;
+}
+
+// hr is our overline for content areas
+
+hr {
+  color: $black;
+  margin-top: $margin * 2;
+  margin-bottom: $halfmargin;
+
+  @include media($mobile) {
+    margin-top: $margin;
+  }
+}
+
+// img has a margin underneath
+
+img {
+  margin-bottom: $margin;
+}
+
+// footer styles
+
+section#footer {
+  @include span-columns(10 of 10);
+  margin-top: $margin * 3;
+}
+
+// ===
+// Homepage styles
+// ===
+
+// homepage section#nameplate > David Leonard logo
+
+section#tops {
+  // Span across all available columns
+  @include span-columns(10 of 10);
+
+  // Offset from top of page
+  margin-top: $margin * 2;
+}
+
+// homepage section#intro > text explaining what I do
+
+section#intro {
+  // Across 2 lines
+  @include span-columns(8 of 10);
+  margin-top: 0;
+
+  @include media($tablet) {
+    @include span-columns(10 of 10);
+  }
+} 
+
+// homepage section#solutions > Short text explaining problem solving
+
+section#solutions {
+  @include span-columns(5 of 10);
+
+  @include media($tablet) {
+    @include span-columns(6 of 10);
+  }
+
+  @include media($mobile) {
+    @include span-columns(8 of 8);
+  }
+}
+
+// homepage section#contact > Smaller, with social media links
+
+section#contact {
+  @include shift(1 of 10);
+  @include span-columns(4 of 10);
+
+  // Kill margin at the end of row
+  margin-right: 0;
+
+  // $midsize: collapse a bit
+  @include media($midsize) {
+    @include span-columns(5 of 10);
+    @include shift(0);
+    margin-right: 0;
+  }
+
+  // $tablet: hide the extra text
+  @include media($tablet) {
+    @include span-columns(4 of 10);
+    margin-right: 0;
+    .trailer {
+      display: none;
+    }
+  }
+
+  @include media($mobile) {
+    @include span-columns(8 of 8);
+  }
+} 
+
+// homepage section.project > Bigger scrolling section with projects
+
+section.project {
+  @include span-columns(10 of 10);
+}
+
+// Base styles for each article (individual project)
+
+// container for project images
+.images {
+  height: 500px;
+  overflow: hidden;
+
+  @include media($tablet) {
+    height: 350px;
+  }
+}
+
+// layout for pictures
+article {
+  img.big {
+    @include span-columns(7 of 10);
+    height: 100%;
+
+    @include media($tablet) {
+      @include span-columns(10 of 10);
+    }
+  }
+  img.small {
+    @include span-columns(3 of 10);
+
+    height: 234px;
+    // end of row
+    margin-right: 0;
+
+    @include hidden($tablet);
+  }
+  img.smaller {
+    @include span-columns(3 of 10);
+    height: 234px;
+    // end of row
+    margin-right: 0;
+
+    @include hidden($tablet);
+  }
+}
+
+// article#homebase img background
+
+img#homebase-big {
+  @include bgimg("../img/homebase/homebase-ipad.jpg");
+}
+
+img#homebase-smalltop {
+  @include bgimg("../img/homebase/homebase-computer-screen.jpg");
+}
+
+img#homebase-smallbottom {
+  @include bgimg("../img/homebase/homebase-cardsorted.jpg");
+}
+
+// article#
+
+// main project text
+.explainer {
+  @include span-columns(5 of 10);
+
+  @include media($tablet) {
+    @include span-columns(7 of 10);
+  }
+
+  @include media($mobile) {
+    @include span-columns(8 of 8);
+  }
+}
+
+// side project text
+.details {
+  @include span-columns(3 of 10);
+  @include hidden($mobile);
+}

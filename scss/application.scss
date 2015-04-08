@@ -1,0 +1,31 @@
+//
+// application.scss
+//
+// Our base file. Imports everything we need and holds
+// components we haven't broken out to partials.
+//
+
+// =====
+// Variables
+// =====
+
+$black: rgba(0,0,0,0.8);
+$red: #cf1b41;
+$green: #3e5641;
+$gray: #363537;
+$blue: #004b6a;
+$background-tint: rgba(0,0,0,0.04);
+
+$serif: "abril-text","Sentinel",serif;
+$sans-serif: "proxima-nova","Proxima Nova",Helvetica,sans-serif;
+
+$spacing: 2em;
+
+// =====
+// Imports
+// =====
+
+@import '../vendor/bourbon/app/assets/stylesheets/bourbon';
+@import 'grid-settings';
+@import '../vendor/neat/app/assets/stylesheets/neat';
+@import 'normalize';

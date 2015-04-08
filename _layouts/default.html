@@ -15,7 +15,7 @@
     <script>try{Typekit.load();}catch(e){}</script>  
   </head>
 
-  <body>
+  <body {% if page.body_id %}id="page-{{ page.body_id }}"{% endif %}>
     {{ content }}
   </body>
 

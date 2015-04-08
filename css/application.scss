@@ -12,15 +12,18 @@
 // Variables
 // =====
 
-$black: rgba(0,0,0,0.8);
-$red: #cf1b41;
-$green: #3e5641;
-$gray: #363537;
-$blue: #004b6a;
-$background-tint: rgba(0,0,0,0.04);
+$font-sans: "aktiv-grotesk-std","Helvetica",Helvetica,sans-serif;
+$font-serif-headline: "utopia-std-display","Georgia",Georgia,serif;
+$font-serif-body: "ff-meta-serif-web-pro","Georgia",Georgia,serif;
+$font-basesize: 16px;
 
-$serif: "abril-text","Sentinel",serif;
-$sans-serif: "proxima-nova","Proxima Nova",Helvetica,sans-serif;
+$color-black: lighten(#7f7f7f,10%);
+$color-blue-light: #afc2d5;
+$color-blue-dark: #304d6d;
+$color-yellowy: #DCBF85;
+$color-orange: #cc998d;
+$color-green: lighten(#81968f,15%);
+$color-purple: lighten(#7d7abc,15%);
 
 $spacing: 2em;
 
@@ -32,3 +35,143 @@ $spacing: 2em;
 @import 'grid-settings';
 @import '../vendor/neat/app/assets/stylesheets/neat';
 @import 'normalize';
+
+// =====
+// RESET!
+// =====
+
+// html, body, div, span, applet, object, iframe,
+// h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+// a, abbr, acronym, address, big, cite, code,
+// del, dfn, em, font, img, ins, kbd, q, s, samp,
+// small, strike, strong, sub, sup, tt, var,
+// dl, dt, dd, ol, ul, li,
+// fieldset, form, label, legend,
+// table, caption, tbody, tfoot, thead, tr, th, td {
+//   margin: 0;
+//   padding: 0;
+// }
+
+// =====
+// Typography
+// =====
+
+html,body {
+  font-family: $font-serif-body;
+  font-weight: 500;
+  font-style: normal;
+  color: $color-black;
+  font-size: $font-basesize;
+}
+
+h1,h2,h3,h4,h5,h6,
+.h1,.h2,.h3,.h4,.h5,.h6 {
+  font-family: $font-sans;
+  font-weight: 600;
+  letter-spacing: -1px;
+}
+
+h1, .h1 {
+  font-size: $font-basesize * 2.5;
+}
+
+p {
+  font-size: $font-basesize;
+}
+
+// Anchor reset
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+  border-bottom: 8px solid $color-black;
+
+  &:hover {
+    opacity: 0.7;
+  }
+
+  transition: 0.4s all ease-in;
+}
+
+// Color classes
+
+@mixin color($requested-color) {
+  color: $requested-color;
+  a {
+    border-bottom-color: lighten($requested-color,15%);
+  }
+}
+
+.c-blue-light {
+  @include color($color-blue-light);
+}
+
+.c-blue-dark {
+  @include color($color-blue-dark);
+}
+
+.c-orange {
+  @include color($color-orange);
+}
+
+.c-green {
+  @include color($color-green);
+}
+
+.c-purple {
+  @include color($color-purple);
+}
+
+.c-yellowy {
+  @include color($color-yellowy);
+}
+
+// =====
+// Spacing model
+// =====
+
+body,html {
+  margin: 0;
+  padding: 0;
+}
+
+body * {
+  margin: 0;
+  padding: 0;
+}
+
+body * + * {
+  margin-top: 1em;
+}
+
+.row > * {
+  margin-top: 0;
+}
+
+.no-margin {
+  margin-top: 0;
+}
+
+// =====
+// Basic layout
+// =====
+
+.content {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+// =====
+// Component: .header
+// =====
+
+.header {
+  margin-top: 4em;
+  * + * {
+    margin-top: 0.5em;
+  }
+}
+
+.header-name {
+  color: $color-orange;
+}

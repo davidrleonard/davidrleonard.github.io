@@ -2,13 +2,31 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8">
-    <meta name="description" content="Dav">
-    <meta name="author" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{% if page.title %}{{ page.title }} | {% endif %}David Leonard - Frontend Developer and Designer</title>
+
+    <!-- Bare-bones metadata -->
+    <meta name="description" content="David Leonard is a frontend developer and designer working at Code for America.">
+    <meta name="author" content="David Leonard">
+
+    <!-- Import stylesheets and fonts (Typekit: davidleonard.me) -->
     <link rel="stylesheet" href="/css/application.css">
-    <title>David Leonard - Frontend Developer and Designer</title>
+    <script src="//use.typekit.net/qqe4wau.js"></script>
+    <script>try{Typekit.load();}catch(e){}</script>  
   </head>
+
   <body>
     {{ content }}
   </body>
+
+  <!-- Google Analytics tracking -->
+  <script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+    ga('create', 'UA-61636587-1', 'auto');
+    ga('send', 'pageview');
+  </script>
 </html>

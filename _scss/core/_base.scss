@@ -1,0 +1,70 @@
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+.lt-ie9 {
+  // Hack for clearfixes
+  * {
+    filter: none !important;
+  }
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+// .site-content {
+//   padding: 0 $site-margins;
+// }
+
+// Basic page flow
+body {
+  background-color: transparent;
+  height: 100%;
+  min-height: 100vh;
+  background: #FFA17F; /* fallback for old browsers */
+  background: -webkit-linear-gradient(to bottom, $color-green , $color-blue); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to bottom, $color-green , $color-blue); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background-repeat: no-repeat;
+}
+
+.container {
+  box-shadow: $box-shadow;
+  background-color: white;
+  margin: {
+    top: $site-buffer-mobile;
+    left: $site-buffer-mobile;
+    bottom: $site-buffer-mobile;
+  }
+  @include media($mobile-up) {
+    margin: {
+      top: $site-buffer;
+      left: $site-buffer;
+      bottom: $site-buffer;
+    }
+  }
+}
+
+.content {
+  padding: {
+    top: $site-buffer-mobile * 2;
+    left: $site-buffer-mobile * 2;
+    bottom: $site-buffer-mobile * 2;
+    right: $site-buffer-mobile * 2;
+  }
+  @include media($mobile-up) {
+    padding: {
+      top: $site-buffer * 2;
+      left: $site-buffer * 2;
+      bottom: $site-buffer * 2;
+      right: $site-buffer * 2;
+    }
+  }
+  max-width: 65em;
+}
+
+.subsection {
+  margin-top: 1.3em;
+  @include clearfix();
+}

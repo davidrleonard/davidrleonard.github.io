@@ -1,0 +1,50 @@
+// *** CORE FRAMEWORK
+// *** Thanks to Norris Hung and the Code for America Chime team for the
+// *** beginnings of this simple framework.
+
+// Vendor -------------- //
+// We rely on Bourbon/Neat framework, and set our own grid-settings
+
+@import '../vendor/bourbon/app/assets/stylesheets/bourbon';
+@import 'core/grid-settings';
+@import '../vendor/neat/app/assets/stylesheets/neat';
+
+// Core -------------- //
+// Variables, utilities, grids and other items that underly the framework
+
+@import 'core/defaults';
+@import 'core/variables';
+@import 'core/utilities';
+@import 'core/normalize';
+@import 'core/base';
+@import 'core/grid';
+
+// Core elements ---------- //
+// Styles basic html elements.
+
+@import 'core-elements/inline';
+@import 'core-elements/typography';
+@import 'core-elements/list';
+@import 'core-elements/table';
+@import 'core-elements/aside';
+@import 'core-elements/blockquote';
+@import 'core-elements/figure';
+@import 'core-elements/button';
+@import 'core-elements/form';
+@import 'core-elements/icons';
+
+// Local patterns --------- //
+// Frequently-used patterns specific to this project
+
+@import 'local-patterns/site-section';
+@import 'local-patterns/card';
+
+// Local templates --------- //
+// A base layout for all pages, and specific layouts for other pages as necessary
+
+// @import 'local-templates/page-xxxxx';
+
+// Hacks --------- //
+// Temporary solutions until a better permanant solution is found
+
+@import 'shame';

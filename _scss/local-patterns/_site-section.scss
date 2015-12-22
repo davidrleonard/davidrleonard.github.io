@@ -1,0 +1,17 @@
+.site-section {
+  padding: {
+    top: 1em;
+    bottom: 1em;
+  }
+  @include media($mobile-up) {
+    padding: {
+      top: 2em;
+      bottom: 2em;
+    }
+  }
+}
+
+.site-section--first {
+  padding-top: 0;
+  @include media($mobile-up) { padding-top: 0 }
+}

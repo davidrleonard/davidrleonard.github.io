@@ -1,5 +1,4 @@
-davidrleonard dot github dot io
+davidleonard.me
 =======================
 
-This is the repo for my personal website. It will eventually live here.
-
+This is the repo for my personal website. See a bug, typo, or something else out of place? Issues and pull requests are welcome!

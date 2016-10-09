@@ -1,0 +1,160 @@
+---
+---
+//////
+//// application.scss
+////
+//// Our base file. Imports everything we need and holds
+//// components we haven't broken out to partials.
+//////
+
+// =====
+// Imports
+// =====
+
+@import 'normalize';
+
+// =====
+// Mixins
+// =====
+
+@mixin media($breakpoint) {
+  @media only screen and (min-width: $breakpoint) {
+    @content;
+  }
+}
+
+// =====
+// Variables
+// =====
+
+// Colors
+$color-black: #7f7f7f;
+$color-blue-light: #afc2d5;
+$color-blue-dark: #304d6d;
+$color-yellowy: #DCBF85;
+$color-orange: #cc998d;
+$color-green: lighten(#81968f,15%);
+$color-purple: lighten(#7d7abc,15%);
+
+// Fonts
+$font-sans: "Open Sans","Helvetica",Helvetica,sans-serif;
+$font-serif: "Vollkorn","Georgia",Georgia,serif;
+
+// Magic numbers
+$base-font-size: 14px; // $base-font-size equals `1rem`
+$base-line-height: 1.6rem;
+
+// Breakpoints
+$medium-up: 550px;
+$large-up: 950px;
+
+// =====
+// Typography
+// =====
+
+html, body {
+  font-family: $font-serif;
+  font-weight: 400;
+  font-style: normal;
+  color: $color-black;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+
+  @include media($medium-up) {
+    font-size: $base-font-size * 1.2;
+  }
+}
+
+h1, .h1,
+h2, .h2,
+h3, .h3,
+h4, .h4,
+h5, .h5,
+h6, .h6 {
+  font-family: $font-sans;
+  font-weight: 600;
+}
+
+h1, .h1 {
+  font-size: 1.2rem;
+
+  &:first-child {
+    margin-top: 0;
+  }
+}
+
+h2, .h2 {
+  font-size: 0.8rem;
+  font-weight: 400;
+  letter-spacing: .05rem;
+  text-transform: uppercase;
+  color: $color-purple;
+  margin-top: 2rem;
+}
+
+p {
+  font-size: inherit;
+}
+
+// Anchor reset
+a {
+  text-decoration: none;
+  color: inherit;
+  display: inline-block;
+
+  &:after {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 1px;
+    background-color: lighten($color-black, 30%);
+    position: relative;
+    top: -0.4em;
+  }
+}
+
+a.small-link {
+  font-size: 0.65em;
+  display: inline-block;
+  text-transform: uppercase;
+  color: $color-green;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+
+  &:after { display: none; }
+
+  &.bd { color: $color-blue-dark; }
+  &.bl { color: $color-blue-light; }
+  &.y  { color: $color-yellowy; }
+  &.o  { color: $color-orange; }
+}
+
+// =====
+// Layout
+// =====
+
+body, html {
+  margin: 0;
+  padding: 0;
+}
+
+.content {
+  max-width: 650px;
+  padding: 1.5rem;
+
+  @include media($medium-up) {
+    padding: 3rem;
+  }
+
+  @include media($large-up) {
+    margin-left: 6rem;
+  }
+}
+
+// =====
+// Lists
+// =====
+
+ul {
+  padding-left: 1.2rem;
+}

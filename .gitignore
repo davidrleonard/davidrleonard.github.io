@@ -1,5 +1,3 @@
-bower_components/
-vendor/
 .sass-cache/
 *.map
 _site/
